@@ -1,0 +1,66 @@
+* {
+  font-family: nunito sans, sans-serif;
+}
+#bannerImg {
+  width: 100%;
+}
+#heading,
+#quota {
+  text-align: center;
+  color: #374449;
+}
+#heading {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+/* form */
+.form {
+  border: 1px solid #374449;
+  margin-bottom: 100px;
+}
+form {
+  margin: 50px 100px;
+}
+#field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+#type {
+  width: 100%;
+}
+#user,
+#address,
+#requirnments {
+  font-size: 18px;
+  font-weight: 500;
+}
+#submit {
+  width: 30%;
+}
+
+/* banner */
+#banner {
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+#quotaBanner {
+  margin: 60px auto auto 50px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#head {
+  font-weight: 500;
+}
+#connect {
+  margin: auto;
+}
+#btn {
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #3931af;
+  color: #fff;
+}

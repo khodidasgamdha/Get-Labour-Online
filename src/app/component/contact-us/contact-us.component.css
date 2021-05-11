@@ -1,0 +1,70 @@
+/* img */
+* {
+  font-family: nunito sans,sans-serif;
+}
+#contactus {
+    font-size: 50px;
+}
+#home {
+    color: #ccc;
+    text-decoration: none;
+}
+.img-jmbo{
+    background-image:url('../../../assets/img/contact-us.jpg');
+    color:white;
+    padding: 145px 0 70px 0;
+    background-repeat: no-repeat;
+}
+
+/* heading */
+.heading {
+    margin: 50px auto;
+}
+#heading, #quota {
+    text-align: center;
+}
+#heading {
+    font-size: 50px;
+    font-weight: 600;
+    color: #374449;
+}
+
+/* contact box */
+form {
+    margin: 20px auto;
+}
+#field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+textarea {
+    height: 120px;
+}    
+.bg {
+    overflow: hidden;
+    position: relative;
+}
+.bg-image {
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.bg-contact {
+    margin: 50px auto;
+    position: relative;
+}
+#form {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.contact-box{
+    padding: 30px 10px;
+}
+#query {
+    padding: 80px 110px;
+}
+button {
+    width: 100%;
+}

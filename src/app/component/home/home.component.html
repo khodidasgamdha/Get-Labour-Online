@@ -1,0 +1,113 @@
+<!-- navbar -->
+<app-navbar></app-navbar>
+
+<!-- main content -->
+
+<!--slider images-->
+<ngb-carousel>
+    <ng-template ngbSlide>
+        <div class="wrapper">
+            <img src="../../assets/img/labour-slider1.jpg" alt="Random first slide" id="mainImage">
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="wrapper">
+            <img src="../../assets/img/labour-slider2.jpg" alt="Random first slide" id="mainImage">
+        </div>
+    </ng-template>
+</ngb-carousel>
+
+<!-- prices -->
+<div class="container" id="price">
+
+    <!-- heading -->
+    <h1 id="heading">Prices</h1>
+
+    <!-- card -->
+    <div class="col-md-12 row">
+        <div *ngFor="let type of zeroYear" class="col-md-3 mb-3">
+            <mat-card>
+                <img mat-card-image src="{{ type.img }}" alt="{{  type.position }}" class="image">
+                <mat-card-content class="d-flex">
+                    <h3 id="title">{{ type.position }}</h3>
+                    <h4 class="ml-auto"><strong>&#8377;</strong>&nbsp;{{ type.price }}/hour</h4>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div id="discount" class="row">
+
+        <!-- quota -->
+        <div class="col-md-8 container" id="offerQuota">
+            <h1 id="head">Prices May Different for Large Booking</h1>
+            <h4>*Get more than 10% Discount on Large and Bulk Bookings :)</h4>
+            <h4>Our Average Price range is &#8377; 45/hour</h4>
+        </div>
+
+        <!-- contact-us button -->
+        <div class="col-md-3 d-flex justify-content-center" id="goto">
+            <button mat-raised-button id="priceBtn" routerLink='/prices' color='primary'> Check Prices </button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- prices -->
+<div class="container">
+
+    <!-- heading -->
+    <h1 id="heading">What our Customer Says</h1>
+
+    <!-- review -->
+    <ngb-carousel>
+
+        <!-- slider -->
+        <ng-template ngbSlide *ngFor="let review of reviews">
+            <div class="wrapper row">
+
+                <!-- card -->
+                <div class="col-md-6 col-lg-4" *ngFor="let revw of review">
+                    <div class="card border-light bg-light text-center">
+
+                        <!-- icon -->
+                        <i class="fa fa-quote-left card-img-top rounded-circle" aria-hidden="true"></i>
+
+                        <!-- card body -->
+                        <div class="card-body blockquote">
+                            <p class="card-text">{{ revw.quota }}</p>
+                            <footer class="blockquote-footer">
+                                <cite title="Source Title">{{ revw.client }}</cite>
+                            </footer>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </ng-template>
+
+    </ngb-carousel>
+
+</div>
+
+<!-- connect with us -->
+<div id="banner" class="container row">
+
+    <!-- quota -->
+    <div class="col-md-8" id="quota">
+        <h1 id="head">START YOUR WORK WITH US</h1>
+        <h3>Let's Connect with Us, We provide batter Service for your work :)</h3>
+    </div>
+
+    <!-- contact-us button -->
+    <div class="col-md-3 d-flex justify-content-center" id="connect">
+        <button mat-raised-button id="btn" routerLink='/contact-us' color='primary'> Contact Us </button>
+    </div>
+
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>

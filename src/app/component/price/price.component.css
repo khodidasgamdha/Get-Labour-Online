@@ -1,0 +1,44 @@
+#heading {
+  color: #374449;
+  font-weight: 500;
+  font-size: 26px;
+  margin: 30px auto;
+}
+.grpLabour {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #374449;
+}
+#title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.image {
+  width: 240px;
+  height: 160px;
+}
+
+/* banner */
+#banner {
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+  height: 200px;
+  margin: 35px auto;
+  border-radius: 10px;
+}
+#quotaBanner {
+  margin: 60px auto auto 50px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#head {
+  font-weight: 500;
+}
+#connect {
+  margin: auto;
+}
+#btn {
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #3931af;
+  color: #fff;
+}

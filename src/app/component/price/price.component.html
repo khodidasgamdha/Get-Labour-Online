@@ -1,0 +1,83 @@
+<!-- navbar -->
+<app-navbar></app-navbar>
+
+<!-- main content -->
+<div class="container">
+
+    <!-- 0 to 2 year experience -->
+    <div class="grpLabour">
+        <h1 id="heading">0 to 2 Years of Experience</h1>
+
+        <!-- card -->
+        <div class="col-md-12 row">
+            <div *ngFor="let type of zeroYear" class="col-md-3 mb-3">
+                <mat-card>
+                    <img mat-card-image src="{{ type.img }}" alt="{{  type.position }}" class="image">
+                    <mat-card-content class="d-flex">
+                        <h3 id="title">{{ type.position }}</h3>
+                        <h4 class="ml-auto"><strong>&#8377;</strong>&nbsp;{{ type.price }}/hour</h4>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 2 to 5 year experience -->
+    <div class="grpLabour">
+        <h1 id="heading">2 to 5 Years of Experience</h1>
+
+        <!-- card -->
+        <div class="col-md-12 row">
+            <div *ngFor="let type of twoYear" class="col-md-3 mb-3">
+                <mat-card>
+                    <img mat-card-image src="{{ type.img }}" alt="{{  type.position }}" class="image">
+                    <mat-card-content class="d-flex">
+                        <h3 id="title">{{ type.position }}</h3>
+                        <h4 class="ml-auto"><strong>&#8377;</strong>&nbsp;{{ type.price }}/hour</h4>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 5+ year experience -->
+    <div>
+        <h1 id="heading">5+ Years of Experience</h1>
+
+        <!-- card -->
+        <div class="col-md-12 row">
+            <div *ngFor="let type of fiveYear" class="col-md-3 mb-3">
+                <mat-card>
+                    <img mat-card-image src="{{ type.img }}" alt="{{  type.position }}" class="image">
+                    <mat-card-content class="d-flex">
+                        <h3 id="title">{{ type.position }}</h3>
+                        <h4 class="ml-auto"><strong>&#8377;</strong>&nbsp;{{ type.price }}/hour</h4>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- connect with us -->
+<div id="banner" class="container row">
+
+    <!-- quota -->
+    <div class="col-md-8" id="quotaBanner">
+        <h1 id="head">START YOUR WORK WITH US</h1>
+        <h3>Let's Connect with Us, We provide batter Service for your work :)</h3>
+    </div>
+
+    <!-- contact-us button -->
+    <div class="col-md-3 d-flex justify-content-center" id="connect">
+        <button mat-raised-button id="btn" routerLink='/contact-us'> Contact Us </button>
+    </div>
+
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>

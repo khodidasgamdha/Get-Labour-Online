@@ -1,0 +1,69 @@
+nav {
+  background-color: #001936;
+  height: 65px;
+  font-family: nunito sans,sans-serif;
+}
+.navbar-brand {
+  font-family: cursive;
+  font-weight: 600;
+}
+.nav-item .active {
+  border-bottom: 1px solid red;
+}
+.btn {
+  border-radius: 0px;
+  height: 30px;
+  width: 100px;
+  margin-top: 5px;
+}
+mat-icon {
+  color: white;
+   vertical-align: auto;
+}
+
+/* change password & profile  */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 100px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.close:hover {
+  color: #000;
+  cursor: pointer;
+}
+.popup .content {
+  overflow: auto;
+  margin: 10px auto;
+}
+@media screen and (max-width: 1200px) {
+  .popup {
+    width: 50%;
+  }
+}
+#field {
+  width: 100%;
+}

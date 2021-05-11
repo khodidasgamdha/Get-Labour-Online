@@ -1,0 +1,24 @@
+#heading {
+    text-align: center;
+    color: #374449;
+    font-family: nunito sans,sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 40px auto;
+}
+table {
+    width: 100%;
+}
+#tbl {
+    margin: auto 20px;
+}
+/* th.mat-header-cell {
+    text-align: center;
+}
+.bdr {
+    font-size: 14px;
+}
+#bdr {
+    border-left: 2px solid #ccc;
+} */
+  

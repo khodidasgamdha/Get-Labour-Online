@@ -1,0 +1,129 @@
+<!-- navbar -->
+<app-navbar></app-navbar>
+
+<!-- main content -->
+
+<!-- img -->
+<div class="img-jmbo">
+    <div class="container">
+        <h1 id="contactus"> Contact Us </h1>
+        <p><a routerLink='/' id="home">Home</a><a> / Contact Us </a></p>
+    </div>
+</div>
+
+<!-- text -->
+<div class="heading">
+    <h1 id="heading">Get in Touch</h1>
+    <h3 id="quota">We’re curious to hear your Query</h3>
+</div>
+
+<div class="bg">
+
+    <!-- map -->
+    <div>
+        <img src="../../../assets/img/map.jpg" alt="map" class="bg-image">
+    </div>
+
+    <!-- form -->
+    <div class="bg-contact container">
+        <div class="row contact-box">
+    
+            <!-- image -->
+            <div class="col-lg-8 d-none d-lg-block" id="query">
+                <img src="../../assets/img/query.png" alt="query">
+            </div>
+
+            <!-- form -->
+            <div class="col-lg-4" id="form">
+                <form [formGroup]="form">
+
+                    <!-- name -->
+                    <div>
+                        <mat-form-field appearance='fill' id="field">
+                            <mat-label>Name</mat-label>
+                            <input 
+                                matInput
+                                type="text" 
+                                name="name" 
+                                formControlName="name"
+                                placeholder="John Doe"
+                                required>
+    
+                            <!-- errors -->
+                            <mat-error *ngIf="name.hasError('required')">Enter Name</mat-error>
+                            <mat-error *ngIf="name.hasError('minlength')">Enter Minimum {{ name.errors.minlength.requiredLength }} Character</mat-error>
+                            <mat-error *ngIf="name.hasError('maxlength')">Only {{ name.errors.maxlength.requiredLength }} Character Allowed</mat-error>
+                            <mat-error *ngIf="name.hasError('pattern')">Please, Enter Valid Name</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div>
+                        <mat-form-field appearance='fill' id="field">
+                            <mat-label>E-mail</mat-label>
+                            <input 
+                                matInput
+                                type="text" 
+                                name="email" 
+                                formControlName="email"
+                                placeholder="john@gmail.com"
+                                required>
+    
+                            <!-- errors -->
+                            <mat-error *ngIf="email.hasError('required')">Enter E-mail</mat-error>
+                            <mat-error *ngIf="email.hasError('email')">Please, Enter Valid E-mail</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <!-- subject -->
+                    <div>
+                        <mat-form-field appearance='fill' id="field">
+                            <mat-label>Subject</mat-label>
+                            <input 
+                                matInput
+                                type="text" 
+                                name="subject" 
+                                formControlName="subject"
+                                placeholder="For Labour Requirnments..."
+                                required>
+
+                            <!-- errors -->
+                            <mat-error *ngIf="subject.hasError('required')">Enter Subject</mat-error>
+                            <mat-error *ngIf="subject.hasError('minlength')">Enter Minimum {{ subject.errors.minlength.requiredLength }} Character</mat-error>
+                            <mat-error *ngIf="subject.hasError('maxlength')">Only {{ subject.errors.maxlength.requiredLength }} Character Allowed</mat-error>
+                            <mat-error *ngIf="subject.hasError('pattern')">Please, Enter Valid Subject</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <!-- msg -->
+                    <div>
+                        <mat-form-field appearance='fill' id="field">
+                            <mat-label>Leave a Message</mat-label>
+                            <textarea 
+                                matInput
+                                name="message" 
+                                formControlName="message"
+                                placeholder="ex. Message..."
+                                required>
+                            </textarea>
+
+                            <!-- errors -->
+                            <mat-error *ngIf="message.hasError('required')">Enter Message</mat-error>
+                            <mat-error *ngIf="message.hasError('pattern')">Please, Enter Valid Message</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <!-- submit -->
+                    <div class="form-group">
+                        <button mat-raised-button color='primary' class="mt-2" (click)="submit(form.value)">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+    
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>

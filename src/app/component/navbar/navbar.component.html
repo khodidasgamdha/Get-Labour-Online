@@ -1,0 +1,137 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        
+        <!-- brand logo -->
+        <a class="navbar-brand" routerLink="/">Get Labour</a>
+
+        <!-- button for small size -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav text-uppercase">
+
+                <!-- home -->
+                <li class="nav-item mr-2">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                </li>
+
+                <!-- book labour -->
+                <li class="nav-item mr-2">
+                    <a class="nav-link" routerLink="/book-labour" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Book Labour</a>
+                </li>
+
+                <!-- about us -->
+                <li class="nav-item mr-2">
+                    <a class="nav-link" routerLink="/prices" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Price</a>
+                </li>
+
+                <!-- contact us -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact-us" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contact US</a>
+                </li>
+
+                <!-- contact us -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/order" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Orders</a>
+                </li>
+
+                <!-- contact us -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/message" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Queries</a>
+                </li>
+
+            </ul>
+ 
+        </div>
+
+        <div class="row">
+
+            <!-- login icon -->
+            <button mat-raised-button routerLink='/login' *ngIf='!isLoggedIn()' color='primary'>
+                <mat-icon>login</mat-icon>&nbsp;
+                <span>Login</span>
+            </button>
+
+            <!-- dropdown -->
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon *ngIf='isLoggedIn()'>account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                
+                <!-- profile -->
+                <button mat-menu-item>
+                    <mat-icon>verified_user</mat-icon>
+                    <span>Welcome, 
+                        <span *ngFor='let i of users'>
+                            <span *ngIf='i.id === id'>
+                                {{i.firstName}}
+                            </span>
+                        </span>  
+                    </span>
+                </button>
+                <mat-divider></mat-divider>
+
+                <!-- profile -->
+                <button mat-menu-item (click)="popup = true">
+                    <mat-icon>person</mat-icon>
+                    <span>View Profile</span>
+                </button>
+                <mat-divider></mat-divider>
+
+                <!-- change password -->
+                <button mat-menu-item (click)='change = !change'>
+                    <mat-icon>no_encryption</mat-icon>
+                    <span>Change Password</span>
+                </button>
+                <mat-divider></mat-divider>
+
+                <!-- logout -->
+                <button mat-menu-item (click)='logout()'>
+                    <mat-icon>logout</mat-icon>
+                    <span>Logout</span>
+                </button>
+
+            </mat-menu>   
+        </div>
+
+    </div>
+</nav>
+
+<!-- change password -->
+<div class="overlay" *ngIf="change">
+    <div class="popup" [formGroup]='forgotPswrd'>
+
+        <!-- heading -->
+        <h1>Change Password</h1>
+
+        <!-- input field -->
+        <mat-form-field appearance='fill' id="field" class="mt-3 mb-3">
+            <mat-label>E-mail</mat-label>
+            <input 
+                matInput
+                type='text' 
+                formControlName="email" 
+                placeholder="john@gmail.com"
+                #email
+                required/>
+
+            <!-- errors -->
+            <mat-error *ngIf="forgotEmail.hasError('required')">Enter E-mail</mat-error>
+
+        </mat-form-field>
+
+        <button mat-raised-button color='primary' id="field" (click)='forgotPassword(email.value)'>
+            Send <mat-icon class="ml-2">send</mat-icon>
+        </button>
+        
+        <!-- close -->
+        <a class="close" (click)="change = false">&times;</a>
+    
+    </div>
+</div>
+
+<!-- view profile -->
+<app-profile [popup]='popup' *ngIf='popup'></app-profile>

@@ -1,0 +1,17 @@
+#heading {
+    text-align: center;
+    color: #374449;
+    font-family: nunito sans,sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 40px auto;
+}
+table {
+    width: 100%;
+}
+th.mat-sort-header-sorted {
+    color: black;
+}
+::ng-deep .mat-sort-header-container {
+    font-size: 14px;
+}
